@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
+  get 'about' => 'about#show'
+
   resource :cart, only: [:show] do
     post   :add_item
     post   :remove_item
@@ -24,7 +26,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+    # get 'about' => 'about#show'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
