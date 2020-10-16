@@ -1,0 +1,14 @@
+<h1>Signup!</h1>
+
+<%= form_for :user, url: '/users' do |form| %>
+  <p class="error">
+    <%= flash[:error] %>
+  </p>
+      
+  Name: <%= form.text_field :name, :class => "form-control" %>
+  Email: <%= form.text_field :email, :class => "form-control" %>
+  Password: <%= form.password_field :password, :class => "form-control" %>
+  Password Confirmation: <%= form.password_field :password_confirmation, :class => "form-control" %>
+  <%= form.submit "Register", class: 'btn btn-primary login' %>
+
+<% end %>
